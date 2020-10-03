@@ -1,0 +1,26 @@
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8" *ngIf = 'display'>
+    <table class="table">
+        <thead>
+          <tr>
+    
+            <th scope="col">make</th>
+            <th scope="col">model</th>
+            <th scope="col">price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of rowData">
+              
+            
+            <td>{{item.make}}</td>
+            <td>{{item.model}}</td>
+            <td>{{item.price}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+<div class="col-sm-2"></div>
+</div>

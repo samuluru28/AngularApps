@@ -1,0 +1,142 @@
+<form [formGroup] = "registerform" >
+<div class="form-row" >
+    <div class = "col-sm-3"></div>
+    <div class = "col-sm-9">
+    
+        <div class = "row" style="height: 100%;">
+            <div class = "col-sm-12" style = "background:slategray;">
+                <div class = "row">
+                <div class = "form-group col-sm-4">                    
+                    <label for="Firstname">First Name *</label>
+                    <input type="text" class="form-control" id="FName" aria-describedby="empFnameHelp" formControlName= "FirstName" placeholder="Enter FirstName">
+                    
+                </div>
+                <div class = "form-group col-sm-4">
+                    <label for="Middlename">Middle Name *</label>
+                    <input type="text" class="form-control" id="MName" aria-describedby="empMnameHelp" formControlName= "MiddleName" placeholder="Enter MiddleName">
+                </div>
+                <div class = "form group col-sm-4">
+                    <label for="Lastname">Last Name *</label>
+                    <input type="text" class="form-control" id="LName" aria-describedby="empLnameHelp" formControlName= "LastName" placeholder="Enter LastName">
+                </div> 
+                </div>
+                <div class = "form-row">
+                <div class = "form-group col-sm-6">                   
+                <div class= "form-group">
+                    <mat-label for="DOB">DOB *</mat-label><br>
+                    <mat-form-field>
+                    <mat-label>DOB</mat-label>
+                    <input matInput [matDatepicker]="picker"  FormControlName = "DOB" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                 </div>   
+                    
+                </div>
+                <div class = "form-group col-sm-6">
+                    <label for="MaritalStatus">Marital Status *</label>
+                    <input type="text" class="form-control" id="MStatus"  formControlName= "MaritalStatus" placeholder="Enter MaritalStatus">
+                </div>                   
+                </div>
+                <div class = "form-row">
+                    <div class = "col-sm-12">
+                        <label for="Email">Email *</label>
+                        <input type="Email" class="form-control" id="email" formControlName= "Email" placeholder="Email">  
+                    </div>                                      
+                </div>
+                <div class = "form-row">
+                    <div class = "col-sm-12">
+                        <label for="Position">Position you are applying for *</label>
+                        <input type="text" class="form-control" id="Position"  formControlName= "Position" placeholder="Position">  
+                    </div> 
+                </div>
+                <div class = "form-row">
+                    <div class = "col-sm-6">
+                        <label for="Phone">Phone *</label>
+                        <input type="Phone" class="form-control" id="phone" formControlName= "Phone" placeholder="Phone">                   
+                    </div> 
+                    <div class = "form-group col-sm-6">
+                        <label for="Fax">Fax</label>
+                        <input type="Fax" class="form-control" id="fax" formControlName= "Fax" placeholder="Fax"> 
+                    </div> 
+                </div>
+                <div class = "form-row">
+                    <div class = "form-group col-sm-4">
+                        <label for="Address">Phone *</label>
+                        <input type="Address" class="form-control" id="address" formControlName= "Address" placeholder="Address">                   
+                    </div> 
+                    <div class = "form-group col-sm-4">
+                        <label for="State">State</label>
+                        <input type="State" class="form-control" id="state"  formControlName= "State" placeholder="State"> 
+                    </div>
+                    <div class = "form-group col-sm-4">
+                        <label for="ZipCode">ZipCode</label>
+                        <input type="zipcode" class="form-control" id="zipcode"  formControlName= "ZipCode" placeholder="ZipCode"> 
+                    </div> 
+                </div>
+                <div class = "form-row">
+                    <div class = "form-group col-sm-6">
+                            <label for="Relocate">Are you Willing to Relocate *</label><br>
+                            <input placeholder="Relocate" name="Radibtn" type="radio" value="Yes" FormControlName = "Relocate" checked ="true"/> Yes      
+                            <input placeholder="Relocate" name="Radibtn" type="radio" value="No" FormControlName = "Relocate" /> No      
+                            <input placeholder="Relocate" name="Radibtn" type="radio" value="NotSure"  FormControlName = "Relocate"/> Not sure       
+                            
+                            
+                            
+                    </div> 
+                    <div class = "form-group col-sm-6">                        
+                            <label for="Salary">Salary</label>
+                            <input type="Salary" class="form-control" id="salary" formControlName= "Salary" placeholder="Salary">         
+                    </div>                    
+                </div>
+                <div class = "form-row">
+                    <div class = "form-group col-sm-12">
+                        
+                            <label for="Comments">Comments</label>
+                            <input type="Comments" class="form-control" id="comments"  formControlName= "Comments" placeholder="Comments">         
+                                          
+                    </div> 
+                                   
+                </div>
+                <div class = "form-row">
+                    <div class = "form-group col-sm-4">
+                        <button type="button" class="btn btn-info" (click) = "onSave()">Save</button>                  
+                    </div> 
+                    <div class = "form-group col-sm-4">
+                        <button type="button" class="btn btn-info">Cancel</button>                  
+                    </div> 
+                    <div class = "form-group col-sm-4">
+                        <button type="button" class="btn btn-info" style="float: right" (click) = "visible()">Visible</button>             
+                    </div> 
+                                   
+                </div>
+            </div>
+        <div class = "row" style="height: 100%;">
+                <div class = "col-sm-12">
+                    <table *ngIf = 'display'>
+                        <thead> <tr>
+    
+                            <th scope="col">FirstName</th>
+                            <th scope="col">MiddleNAme</th>
+                            <th scope="col">LastName</th>
+                            <th scope="col">LastName</th>
+                            <th scope="col">LastName</th>
+                            <th scope="col">LastName</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Fax</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">State</th>
+                            <th scope="col">ZipCode</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Relocate</th>
+                            <th scope="col">Comments</th>
+                          </tr></thead>
+                    </table>           
+                </div>
+                     
+        </div>
+    </div>
+</div>
+</div>
+</form>

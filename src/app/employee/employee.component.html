@@ -1,0 +1,74 @@
+<div class="container">
+  <form>
+    <table>
+      <div class="form-group">        
+          <tr>
+            <td style ="width: 45%">
+        <label for="Firstname">First Name *</label>
+        <input type="text" class="form-control" id="FName" aria-describedby="empFnameHelp" placeholder="Enter FirstName">
+        </td>
+        <td style ="width: 10%"></td>
+        <td style ="width: 45%">
+        <label for="Lastname">Last Name *</label>
+        <input type="text" class="form-control" id="LName" aria-describedby="empLnameHelp" placeholder="Enter LastName">
+        </td>
+      </tr>
+      
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group">
+          <mat-label for="DOB">DOB *</mat-label><br>
+          <mat-form-field>
+          <mat-label>DOB</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+      </div>
+      <div class="form-group">
+        <label for="Email">Email *</label>
+        <input type="Email" class="form-control" id="email" placeholder="Email">         
+      </div>
+      
+      <div class="form-group">
+        <tr>
+          <td style="width: 50%">
+            <label for="Position">Position you are applying for *</label>
+            <input type="text" class="form-control" id="Position" placeholder="Position"> 
+          </td>
+          <td style="width: 5%"></td>
+          <td style="width: 45%">
+            <mat-label for="DOB">StartDate</mat-label><br>
+            <mat-form-field>
+            <mat-label>StartDate</mat-label>
+            <input matInput [matDatepicker]="picker1" placeholder="Choose a StartDate">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>                 
+      </div>
+      <div class="form-group">
+        <label for="Salary">Salary</label>
+        <input type="Salary" class="form-control" id="salary" placeholder="Salary">         
+      </div>
+      <div class="form-group">
+        <label for="Phone">Phone *</label>
+        <input type="Phone" class="form-control" id="phone" placeholder="Phone">         
+      </div>
+      <div class="form-group">
+        <label for="Relocate">Are you Willing to Relocate *</label><br>
+        <input placeholder="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
+        <input placeholder="Relocate" type="radio" value="No" /> No      
+        <input placeholder="Relocate" type="radio" value="NotSure" /> Not sure       
+      </div>
+      <div class="form-group">
+        <label for="Comments">Comments</label>
+        <input type="Comments" class="form-control" id="comments" placeholder="Comments">         
+      </div>
+      <div style="text-align: center;">
+      <button type = "submit" (click) = "onsubmit()">Submit Application</button>
+      </div>
+    </table>
+    </form>
+</div>
