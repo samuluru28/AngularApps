@@ -111,32 +111,53 @@
                                    
                 </div>
             </div>
-        <div class = "row" style="height: 100%;">
-                <div class = "col-sm-12">
-                    <table *ngIf = 'display'>
-                        <thead> <tr>
-    
-                            <th scope="col">FirstName</th>
-                            <th scope="col">MiddleNAme</th>
-                            <th scope="col">LastName</th>
-                            <th scope="col">LastName</th>
-                            <th scope="col">LastName</th>
-                            <th scope="col">LastName</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">Fax</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">State</th>
-                            <th scope="col">ZipCode</th>
-                            <th scope="col">Salary</th>
-                            <th scope="col">Relocate</th>
-                            <th scope="col">Comments</th>
-                          </tr></thead>
-                    </table>           
-                </div>
-                     
-        </div>
+       
     </div>
 </div>
 </div>
 </form>
+<div class = "row" style="height: 100%;">
+    <div class = "col-sm-12">
+        <table class="table" *ngIf = 'display'>
+            <thead> <tr>
+
+                <th scope="col">FirstName</th>
+                <th scope="col">MiddleNAme</th>
+                <th scope="col">LastName</th>
+                <th scope="col">DOB</th>
+                <th scope="col">MaritalStatus</th>
+                <th scope="col">Email</th>
+                <th scope="col">Position</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Fax</th>
+                <th scope="col">Address</th>
+                <th scope="col">State</th>
+                <th scope="col">ZipCode</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Relocate</th>
+                <th scope="col">Comments</th>
+              </tr></thead>
+              <tbody>
+                <tr *ngFor="let item of registration">
+                    
+                  
+                  <td>{{item.FirstName}}</td>
+                  <td>{{item.MiddleNAme}}</td>
+                  <td>{{item.LastName}}</td>
+                  <td>{{item.DOB}}</td>
+                  <td>{{item.MaritalStatus}}</td>
+                  <td>{{item.Email}}</td>
+                  <td>{{item.Position}}</td>
+                  <td>{{item.Phone}}</td>
+                  <td>{{item.Fax}}</td>
+                  <td>{{item.Address}}</td>
+                  <td>{{item.State}}</td>
+                  <td>{{item.Relocate}}</td>
+                  <td>{{item.Comments}}</td>
+                </tr>
+                
+              </tbody>
+        </table>           
+    </div>
+         
+</div>

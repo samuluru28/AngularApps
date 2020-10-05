@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerform: FormGroup;
-  
+  registration = [];
 
   constructor(private builder :FormBuilder) { }
   display= false;
@@ -42,6 +42,7 @@ export class RegisterComponent implements OnInit {
 
   onSave() {
     console.log(this.registerform.value);
+    this.registration[0] = this.registerform.value;
   }
    
  
